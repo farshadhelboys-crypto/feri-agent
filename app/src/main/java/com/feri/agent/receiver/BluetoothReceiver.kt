@@ -14,7 +14,8 @@ class BluetoothReceiver : BroadcastReceiver() {
             intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE, BluetoothDevice::class.java)
         } else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)\n        }
+            intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
+        }
 
         val name = try {
             device?.name ?: "Unknown"
