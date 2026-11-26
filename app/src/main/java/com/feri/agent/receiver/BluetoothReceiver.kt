@@ -14,11 +14,10 @@ class BluetoothReceiver : BroadcastReceiver() {
             intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE, BluetoothDevice::class.java)
         } else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
-        }
+            intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)\n        }
 
         val name = try {
-            device?.name ?: "Unknown
+            device?.name ?: "Unknown"
         } catch (e: SecurityException) {
             "Unknown"
         }
@@ -26,7 +25,6 @@ class BluetoothReceiver : BroadcastReceiver() {
         when (action) {
             BluetoothDevice.ACTION_ACL_CONNECTED -> {
                 Log.d(TAG, "Bluetooth connected: $name")
-                // Optionally auto-start service when AirPods connect
                 if (isLikelyAirPods(name)) {
                     val serviceIntent = Intent(context, VoiceAgentService::class.java).apply {
                         this.action = VoiceAgentService.ACTION_START
