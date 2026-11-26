@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Feri Agent</string>
+    <string name="service_notification_title">Feri Agent فعال است</string>
+    <string name="service_notification_text">آماده شنیدن دستورات صوتی</string>
+    <string name="listening">در حال شنیدن...</string>
+    <string name="idle">آماده</string>
+    <string name="connected_to_airpods">متصل به ایرپاد</string>
+    <string name="not_connected">ایرپاد متصل نیست</string>
+</resources>
